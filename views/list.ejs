@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Hello the is the <%= today %> 
+    </h1>
+    <ul>
+        <% for(let i = 0 ; i<taskList.length ; i++ ){ %>
+            <li>
+                <form>
+                    <button type="submit" formmethod="POST" formaction="/delete">X</button>
+                    <%= taskList[i] %>
+                    <button type="submit" formmethod="POST" formaction="/delete">X</button>
+                </form>
+            </li>
+        <%} %> 
+    </ul>
+    <form action="/" method="post">
+        <input type="text" name='newTodo' placeholder="Add new todo ">
+        <button type="submit">
+            Add
+        </button>
+
+    </form>
+</body>
+</html>
